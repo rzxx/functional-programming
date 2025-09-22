@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.6;
+  background-color: #171717;
+  color: #fafafa;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #fafafa;
+  font-weight: 200;
+}
+
+.todo-app {
+  background-color: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-app::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    230deg,
+    rgba(255, 66, 66, 0.075) 0%,
+    rgba(100, 93, 215, 0.1) 100%
+  );
+  mix-blend-mode: screen;
+}
+
+.todo-controls {
+  max-width: 600px;
+  margin: auto;
+  z-index: 1;
+}
+
+.app-header {
+  text-align: left;
+  padding: 5vh 0;
+}
+
+.task-form {
+  display: flex;
+  gap: 1em;
+}
+
+.task-input {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  background-color: #151515;
+  color: #fafafa;
+  flex-grow: 1;
+  border: 1px solid #383838;
+  border-radius: 8px;
+  font-size: 0.88em;
+  outline: none;
+  box-shadow: 0 0 0 0px rgba(63, 63, 63, 0);
+  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.task-input:focus {
+  border-color: #d1d1d1;
+  box-shadow: 0 0 0 4px rgba(63, 63, 63, 1);
+}
+
+.task-input:placeholder-shown {
+  color: #a1a1a1;
+}
+
+.add-task-button {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  background-color: #e5e5e5;
+  color: #201717;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.15s ease-out;
+}
+
+.add-task-button:hover {
+  background-color: #d1d1d1;
+}
+
+.filter-buttons {
+  display: flex;
+  padding: 1em 0 2em;
+  gap: 0.5em;
+}
+
+.filter-btn {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  padding: 0.25em 0.75em;
+  background-color: #212121;
+  color: #fafafa;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+.filter-btn:hover {
+  background-color: #282828;
+}
+
+.filter-btn.active {
+  background-color: #e5e5e5;
+  color: #171717;
+  border-color: #e5e5e5;
+}
+
+.list-panel {
+  padding: 2em 1em;
+  border-top: 1px solid #282828;
+  box-shadow: inset 0px 2px 2px 0px rgb(0 0 0 / 10%);
+}
+
+.task-list {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #171717;
+  padding: 0.5em 1em;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  transition: background-color 0.15s ease-out;
+}
+
+.task-item:hover {
+  background-color: #1f1f1f;
+}
+
+.task-item-checkbox {
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #212121;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-item-checkbox:checked {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+.task-item-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.45em;
+  height: 0.8em;
+  border: solid #201717;
+  border-width: 0 0.12em 0.12em 0;
+  transform: translate(-50%, -65%) rotate(45deg);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.task-item-text {
+  font-size: 1em;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  margin: -0.125em 0.75em 0;
+}
+
+.task-item.completed .task-item-text {
+  text-decoration: line-through;
+  color: #a1a1a1;
+}
+
+.task-item-delete-btn {
+  margin-left: auto;
+  margin-top: 0;
+  align-self: center;
+  flex-shrink: 0;
+  background-color: #9d4042;
+  color: #fafafa;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.15s ease-out, transform 0.08s ease-out;
+}
+
+.task-item-delete-btn:hover {
+  background-color: #853637;
+}

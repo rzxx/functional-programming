@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Функциональный список задач</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="todo-app">
+      <div class="todo-controls">
+        <header class="app-header">
+          <h1>Список задач</h1>
+        </header>
+        <form class="task-form">
+          <input
+            type="text"
+            class="task-input"
+            placeholder="Что нужно сделать?"
+            required
+            aria-label="Новая задача" />
+          <button type="submit" class="add-task-button">Добавить</button>
+        </form>
+
+        <div class="filter-buttons">
+          <button class="filter-btn" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="active">Активные</button>
+          <button class="filter-btn" data-filter="completed">
+            Выполненные
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-panel">
+      <ul class="task-list"></ul>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
