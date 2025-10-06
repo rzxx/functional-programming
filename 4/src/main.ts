@@ -1,3 +1,4 @@
+import "./components/CalcButton";
 // Определение типов для состояния калькулятора
 type Operator = "add" | "subtract" | "multiply" | "divide" | "power";
 

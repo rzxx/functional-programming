@@ -43,228 +43,160 @@
           <div
             id="button-container"
             class="flex flex-wrap justify-center gap-4 py-4">
-            <button
-              class="size-16 bg-gradient-to-b from-red-700 to-red-500 p-[1px] rounded-lg shadow-2"
-              data-action="clear"
-              aria-label="Clear">
-              <span
-                class="size-full bg-gradient-to-b from-red-700 to-red-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl -ml-0.5">
-                  C
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="sqrt">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl -ml-1 translate-y-0.5">
-                  √
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="power">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.5 translate-y-1.5">
-                  ^
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="divide">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  ÷
-                </span>
-              </span>
-            </button>
+            <!-- Row 1 -->
+            <calc-button
+              label="C"
+              variant="danger"
+              action="clear"
+              width="4rem"
+              height="4rem"
+              text-margin-y="0.05rem"
+              aria-label="Clear"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="7">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.5">
-                  7
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="8">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  8
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="9">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.25">
-                  9
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="multiply">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.25">
-                  ×
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="√"
+              variant="action"
+              action="sqrt"
+              width="4rem"
+              height="4rem"
+              text-margin-x="-0.165rem"
+              text-margin-y="0.125rem"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="4">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  4
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="5">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.25">
-                  5
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="6">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  6
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="^"
+              variant="action"
+              action="power"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.025rem"
+              text-margin-y="0.45rem"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="subtract">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  −
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="÷"
+              variant="action"
+              action="divide"
+              width="4rem"
+              height="4rem"
+              text-margin-y="0.025rem"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="1">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.25">
-                  1
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="2">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.25">
-                  2
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="3">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl ml-0.5">
-                  3
-                </span>
-              </span>
-            </button>
+            <!-- Row 2 -->
+            <calc-button
+              label="7"
+              value="7"
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-700 to-neutral-500 p-[1px] rounded-lg shadow-2"
-              data-action="add">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-700 to-neutral-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  +
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="8"
+              value="8"
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
 
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value="0">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  0
-                </span>
-              </span>
-            </button>
-            <button
-              class="size-16 bg-gradient-to-b from-neutral-400 to-neutral-200 p-[1px] rounded-lg shadow-2"
-              data-value=".">
-              <span
-                class="size-full bg-gradient-to-b from-neutral-400 to-neutral-200 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  .
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="9"
+              value="9"
+              variant="neutral"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.0625rem"></calc-button>
 
-            <button
-              class="w-36 h-16 bg-gradient-to-b from-orange-700 to-orange-500 p-[1px] rounded-lg shadow-2 col-span-2"
-              data-action="equals">
-              <span
-                class="size-full bg-gradient-to-b from-orange-700 to-orange-500 rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
-                <span
-                  class="btn-label bg-clip-text bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25 text-transparent font-sourcesans text-5xl">
-                  =
-                </span>
-              </span>
-            </button>
+            <calc-button
+              label="×"
+              variant="action"
+              action="multiply"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.025rem"></calc-button>
+
+            <!-- Row 3 -->
+            <calc-button
+              label="4"
+              value="4"
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <calc-button
+              label="5"
+              value="5"
+              variant="neutral"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.0625rem"></calc-button>
+
+            <calc-button
+              label="6"
+              value="6"
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <calc-button
+              label="−"
+              variant="action"
+              action="subtract"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <!-- Row 4 -->
+            <calc-button
+              label="1"
+              value="1"
+              variant="neutral"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.0625rem"></calc-button>
+
+            <calc-button
+              label="2"
+              value="2"
+              variant="neutral"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.0625rem"></calc-button>
+
+            <calc-button
+              label="3"
+              value="3"
+              variant="neutral"
+              width="4rem"
+              height="4rem"
+              text-margin-x="0.125rem"></calc-button>
+
+            <calc-button
+              label="+"
+              variant="action"
+              action="add"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <!-- Row 5 -->
+            <calc-button
+              label="0"
+              value="0"
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <calc-button
+              label="."
+              value="."
+              variant="neutral"
+              width="4rem"
+              height="4rem"></calc-button>
+
+            <calc-button
+              label="="
+              action="equals"
+              variant="accent"
+              width="9rem"
+              height="4rem"></calc-button>
           </div>
         </div>
       </div>
     </div>
-
-    <script src="src/main.ts"></script>
+    <script type="module" src="src/main.ts"></script>
   </body>
 </html>
