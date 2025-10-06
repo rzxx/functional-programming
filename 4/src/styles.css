@@ -29,6 +29,10 @@
   box-shadow: var(--inset-shadow-depth), var(--inset-shadow-lighting2);
 }
 
+.shadow-2 {
+  box-shadow: var(--drop-shadow-2);
+}
+
 .typography-title3 {
   font-size: 0.9375rem;
   font-weight: 400;
