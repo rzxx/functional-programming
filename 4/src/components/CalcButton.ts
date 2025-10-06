@@ -39,26 +39,33 @@ class CalcButton extends HTMLElement {
     switch (variant) {
       case "danger":
         return {
-          outer: "bg-gradient-to-b from-red-700 to-red-500",
-          inner: "bg-gradient-to-b from-red-700 to-red-500",
+          outer: "bg-gradient-to-b from-red-700 to-red-500 hover:to-red-600",
+          inner:
+            "bg-gradient-to-b from-red-700 to-red-500 group-hover:to-red-600",
           text: "bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25",
         };
       case "accent":
         return {
-          outer: "bg-gradient-to-b from-orange-700 to-orange-500",
-          inner: "bg-gradient-to-b from-orange-700 to-orange-500",
+          outer:
+            "bg-gradient-to-b from-orange-700 to-orange-500 hover:to-orange-600",
+          inner:
+            "bg-gradient-to-b from-orange-700 to-orange-500 group-hover:to-orange-600",
           text: "bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25",
         };
       case "neutral":
         return {
-          outer: "bg-gradient-to-b from-neutral-400 to-neutral-200",
-          inner: "bg-gradient-to-b from-neutral-400 to-neutral-200",
+          outer:
+            "bg-gradient-to-b from-neutral-400 to-neutral-200 hover:to-neutral-300",
+          inner:
+            "bg-gradient-to-b from-neutral-400 to-neutral-200 group-hover:to-neutral-300",
           text: "bg-neutral-800 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25",
         };
       case "action":
         return {
-          outer: "bg-gradient-to-b from-neutral-700 to-neutral-500",
-          inner: "bg-gradient-to-b from-neutral-700 to-neutral-500",
+          outer:
+            "bg-gradient-to-b from-neutral-700 to-neutral-500 hover:to-neutral-600",
+          inner:
+            "bg-gradient-to-b from-neutral-700 to-neutral-500 group-hover:to-neutral-600",
           text: "bg-neutral-50 bg-gradient-to-b from-neutral-50/25 to-neutral-950/25",
         };
       case "custom":
@@ -94,7 +101,7 @@ class CalcButton extends HTMLElement {
 
     this.innerHTML = `
       <button
-        class="rounded-lg shadow-2 p-[1px] ${
+        class="rounded-lg p-[1px] shadow-button hover:shadow-button-close active:shadow-button-press active:scale-95 transition-all duration-75 ease-out group ${
           variantClasses.outer
         } ${extraClass}"
         style="width:${width};height:${height};margin:${marginY} ${marginX};"
@@ -103,7 +110,7 @@ class CalcButton extends HTMLElement {
       >
         <span class="size-full ${
           variantClasses.inner
-        } rounded-lg relative btn-highlight overflow-clip flex items-center justify-center">
+        } rounded-lg relative btn-highlight overflow-clip flex items-center justify-center group-active:brightness-90 transition-colors duration-75 ease-out">
           <span class="btn-label bg-clip-text ${
             variantClasses.text
           } text-transparent font-sourcesans ${textSize}"

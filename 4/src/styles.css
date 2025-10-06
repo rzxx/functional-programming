@@ -6,14 +6,30 @@
   --font-sourcesans: "Source Sans 3", sans-serif;
 
   /* shadows */
-  --inset-shadow-highlight: inset 0px 2px 2px 0px rgba(250, 250, 250, 0.75);
-  --inset-shadow-lighting: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  --inset-shadow-depth: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --inset-shadow-lighting2: inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+  --inset-shadow-highlight: inset 0px 2px 2px rgba(250, 250, 250, 0.75);
+  --inset-shadow-lighting: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  --inset-shadow-depth: inset 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  --inset-shadow-depth2: inset 0px 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --inset-shadow-lighting2: inset 0px 0px 8px rgba(0, 0, 0, 0.25);
 
-  --drop-shadow-1: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
-  --drop-shadow-2: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
-  --drop-shadow-window: 0px 16px 32px 0px rgba(0, 0, 0, 0.25);
+  /* drop shadows */
+  --drop-shadow-1: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  --drop-shadow-2: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  --drop-shadow-3: 0px 0px 4px rgba(0, 0, 0, 0.75);
+  --drop-shadow-window: 0px 16px 32px rgba(0, 0, 0, 0.25);
+
+  /* composite shadows */
+  --shadow-title: var(--inset-shadow-highlight), var(--inset-shadow-lighting),
+    var(--drop-shadow-1);
+  --shadow-window: var(--drop-shadow-1), var(--drop-shadow-window);
+  --shadow-depth: var(--inset-shadow-depth), var(--inset-shadow-lighting2);
+  --shadow-button: var(--inset-shadow-highlight), var(--inset-shadow-lighting),
+    var(--drop-shadow-1);
+  --shadow-button-close: var(--inset-shadow-highlight),
+    var(--inset-shadow-lighting), var(--drop-shadow-2);
+  --shadow-button-press: var(--inset-shadow-highlight),
+    var(--inset-shadow-depth2), var(--inset-shadow-lighting),
+    var(--drop-shadow-3);
 }
 
 .title-shadow {
@@ -27,10 +43,6 @@
 
 .depth-shadow {
   box-shadow: var(--inset-shadow-depth), var(--inset-shadow-lighting2);
-}
-
-.shadow-2 {
-  box-shadow: var(--drop-shadow-2);
 }
 
 .typography-title3 {
