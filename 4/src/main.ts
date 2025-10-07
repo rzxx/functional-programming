@@ -106,7 +106,7 @@ const handleNumberInput = (
       ? value
       : state.displayValue + value;
 
-  return { .x..state, displayValue: newDisplayValue };
+  return { ...state, displayValue: newDisplayValue };
 };
 
 // ✅ Обработка действия
