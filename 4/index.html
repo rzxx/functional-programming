@@ -33,7 +33,13 @@
             <div
               class="bg-neutral-700 bg-gradient-to-b from-neutral-50/12 to-neutral-950/12 shadow-depth rounded-lg py-3 px-4">
               <div
-                class="text-right font-playfair bg-neutral-50 bg-gradient-to-b from-neutral-50/10 to-neutral-950/10 bg-clip-text text-transparent text-5xl lining-nums -mt-1"
+                class="text-right min-h-[2.5rem] font-playfair bg-neutral-400 bg-gradient-to-b from-neutral-50/10 to-neutral-950/10 bg-clip-text text-transparent text-3xl lining-nums -mt-1"
+                id="secondary-display">
+                &nbsp;
+              </div>
+              <div
+                class="text-right font-playfair data-[error=false]:bg-neutral-50 data-[error=true]:bg-red-700 data-[error=true]:italic data-[error=true]:animate-spin bg-gradient-to-b from-neutral-50/10 to-neutral-950/10 bg-clip-text text-transparent text-5xl lining-nums -mt-1 overflow-hidden break-all"
+                data-error="false"
                 id="display">
                 0
               </div>
