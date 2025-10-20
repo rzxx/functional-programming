@@ -10,4 +10,8 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mscc.GenerativeAI" Version="2.8.19" />
+  </ItemGroup>
+
 </Project>
